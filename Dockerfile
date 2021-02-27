@@ -2,7 +2,7 @@ FROM python:3.8-alpine
 ENV PYTHONUNBUFFERED 1
 
 RUN apk --update --upgrade --no-cache add \
-    cairo-dev pango-dev gdk-pixbuf-dev mariadb-connector-c-dev
+    cairo-dev pango-dev gdk-pixbuf-dev mariadb-connector-c-dev paramiko
 
 # Weasyprint requires fonts to work properly. You have to copy fonts to this directory.
 RUN mkdir /root/.fonts
